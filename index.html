@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tadele Birhan - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="#home" class="logo">Tadele Birhan</a>
+        <nav>
+            <button id="mode-toggle" aria-label="Toggle dark/light mode">
+                <i class="fa-solid fa-moon"></i> 
+            </button>
+            
+            <div class="hamburger">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hidden">
+            <img src="tadele.jpg" alt="Tadele Birhan" class="profile-pic">
+            <h1>Hello, I'm Tadele Birhan.</h1>
+            <h2>A passionate Computer Science Student & Beginner Web Developer.</h2>
+            <p>Currently building my skills in C++, HTML, CSS, and JavaScript
+                on my journey to becoming a full-stack developer and dedicated problem solver.</p>
+            
+            <a href="#about" class="see-more-btn">
+                See More <i class="fa-solid fa-angles-down"></i>
+            </a>
+        </section>
+
+        <hr>
+
+        <section id="skills" class="hidden">
+            <h2>🛠️ My Frontend Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3>Frontend Development</h3>
+                    <ul class="skill-list">
+                        <li><i class="fa-brands fa-html5"></i> HTML5</li>
+                        <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
+                        <li><i class="fa-brands fa-js"></i> JavaScript</li>
+                        <li><i class="fa-solid fa-code"></i> C++</li> 
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        
+        <section id="projects" class="hidden">
+            <h2>💻 Featured Projects</h2>
+            <p>Here are some projects that showcase my abilities in front-end development.</p>
+
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project Thumbnail">
+                    <h3>Project Title One</h3>
+                    <p>A responsive web application built with HTML, CSS, and JavaScript. Focus on clean UI/UX.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fa-solid fa-link"></i> Live Demo</a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Project Thumbnail">
+                    <h3>Project Title Two</h3>
+                    <p>A simple component library demonstrating modern component-based architecture.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fa-solid fa-link"></i> Live Demo</a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="about" class="hidden">
+            <h2>About Me</h2>
+           <p>I am Tadele Birhan,
+             a 3rd-year Computer Science student at the University of Gondar, Ethiopia.
+              My academic focus provides a strong theoretical base,
+               while my passion for development drives my hands-on learning.</p>
+            <p>
+                I have foundational experience in core programming languages,
+                specifically C++, HTML, CSS, and JavaScript.
+                While I am currently a beginner, 
+                I am dedicated to mastering these technologies by focusing on
+                practical projects and real-world problem-solving.
+            </p>
+            <p>My ultimate dream is to evolve into a proficient Full-Stack and Web Developer
+                 and Application Maker. I am committed to continuous learning, building efficient systems,
+                 and solving complex challenges with elegant, well-coded solutions.</p>
+                 <p><strong>“Every great developer you know started as a beginner who never gave up!.”</strong></p>
+            <div class="image-gallery">
+                <img src="gondar.jpg" alt="University of Gondar">
+                <img src="code.jpg" alt="Computer Science">
+            </div>
+            <p class="gallery-description">
+                My academic home: The University of Gondar, Department of Computer Science.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="contact" class="hidden">
+            <h2>Get in Touch</h2>
+            <p>You can reach me via my socials, or send me a message directly using the form below.</p>
+
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <span class="error-message"></span>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <div class="spinner-overlay hidden">
+                            <i class="fa-solid fa-spinner fa-spin"></i>
+                        </div>
+                    </button>
+                    <button type="button" id="clear-btn" class="clear-btn">Clear</button>
+                </div>
+                <div id="form-success-message"></div>
+            </form>
+
+            <div class="contact-divider">
+                <h3>Or find me on</h3>
+            </div>
+            
+            <ul class="contact-info">
+                <li><i class="fa-solid fa-phone"></i> (Ethio-telecom) <a href="tel:+2510967674681">+251 0967674681</a></li>
+                <li><i class="fa-solid fa-phone"></i> (Safari-com) <a href="tel:+2510705674681">+251 0705674681</a></li>
+                <li><i class="fa-solid fa-envelope"></i> (Gmail) <a href="mailto:meskelebirhan1@gmail.com">meskelebirhan1@gmail.com</a></li>
+                <li class="location-item"><i class="fa-solid fa-location-dot"></i> <span class="location-text">University of Gondar, Ethiopia</span></li>
+            </ul>
+
+            <div class="social-links">
+                <a href="https://github.com/tadelebirhan1-tech" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tadele-birhanu-taye-6670b438a" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://t.me/M13Xanxad" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.facebook.com/share/16Y1uSKndH/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://x.com/Meskelebir56424" target="_blank" rel="noopener noreferrer" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/meskelebirhan/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com/@meskelebirhan1?si=hM2MeVGjVeKeifu9" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@meskelebirhan1?_t=ZM-90iR6ahSgns&_r=1" target="_blank" rel="noopener noreferrer" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://imo.onelink.me/7QOl/iso" target="_blank" rel="noopener noreferrer" title="IMO"><i class="fa-solid fa-comment-dots"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>&copy; 2025 Tadele Birhan. All rights reserved.</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
